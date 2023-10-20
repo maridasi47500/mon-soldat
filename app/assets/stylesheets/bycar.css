@@ -1,0 +1,63 @@
+.cetteimg {
+	opacity:0.2;
+	border-radius:44444px;
+	 animation: 3s slidecar;
+}
+.cetteautrimg {
+	border-radius:44444px;
+	 animation: 10s slidecar;
+}
+main.bycar{
+	height:800px;
+	background-size: cover;
+}
+@keyframes slidecar {
+	  0%, 100% {
+		      transform: translate(10px) rotate(0deg);
+		          color: red;
+			    }
+			      10% {
+				          transform: translateX(800px) rotate(110deg);
+					      color: green;
+					        }
+			      25% {
+				          transform: translateX(10px) translateY(400px) rotate(110deg);
+					      color: green;
+					        }
+			      30% {
+				          transform: translateX(10px) translateY(400px) rotate(0deg);
+					      color: green;
+					        }
+			      40% {
+				          transform: translateX(10px) translateY(400px) rotate(360deg);
+					      color: green;
+					        }
+			      50% {
+				          transform: translateX(700px) translateY(400px) rotate(-90deg);
+					      color: green;
+					        }
+			      60% {
+				          transform: translateX(700px) translateY(100px) rotate(-90deg);
+					      color: green;
+					        }
+			      70% {
+				          transform: translateX(700px) translateY(100px) rotate(200deg);
+					      color: green;
+					        }
+			      73% {
+				          transform: translateX(700px) translateY(100px) rotate(-360deg);
+					      color: green;
+					        }
+			      80% {
+				          transform: translateX(30px) translateY(700px) rotate(-160deg);
+					      color: green;
+					        }
+			      90% {
+				          transform: translateX(900px) translateY(400px) rotate(-360deg);
+					      color: green;
+					        }
+			      95% {
+				          transform: translateX(30px) translateY(700px) rotate(-360deg);
+					      color: green;
+					        }
+					}

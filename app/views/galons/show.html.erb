@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @galon %>
+
+<div>
+  <%= link_to "Edit this galon", edit_galon_path(@galon) %> |
+  <%= link_to "Back to galons", galons_path %>
+
+  <%= button_to "Destroy this galon", @galon, method: :delete %>
+</div>

@@ -1,0 +1,16 @@
+<h1>BIenvenue</h1>
+<p>Salut ! bienvenue à mon soldat !</p>
+ <!-- Trigger/Open The Modal -->
+ <button id="myBtn">Log in</button>
+
+ <!-- The Modal -->
+ <div id="myModal" class="modal">
+
+     <!-- Modal content -->
+       <div class="modal-content">
+             <span class="close">&times;</span>
+             <div><%=render template: "users/sessions/new", locals:{resource: User.new, resource_name: :user}%></div>
+             <div><%=render template: "users/registrations/new", locals:{resource: User.new, resource_name: :user}%></div>
+                   </div>
+
+ </div> 

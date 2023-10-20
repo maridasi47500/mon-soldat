@@ -1,0 +1,41 @@
+<%= form_with(model: soldier) do |form| %>
+  <% if soldier.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(soldier.errors.count, "error") %> prohibited this soldier from being saved:</h2>
+
+      <ul>
+        <% soldier.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :image, style: "display: block" %>
+    <%= form.file_field :image %>
+  </div>
+
+  <div>
+    <%= form.hidden_field :user_id %>
+  </div>
+
+  <div>
+    <%= form.label :galon_id, style: "display: block" %>
+    <%= form.select :galon_id, options_for_select(Galon.all.collect{|x|[x.name, x.id, :'data-class' => 'avatar', :'data-style' => "background-image: url('/assets/#{x.image}');background-size:100% 100%;"]}), {}, {id: "CarId2"} %>
+  </div>
+
+  <div>
+    <%= form.label :dateofbirth, style: "display: block" %>
+    <%= form.date_field :dateofbirth %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

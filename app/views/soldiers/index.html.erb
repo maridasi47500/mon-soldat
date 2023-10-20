@@ -1,0 +1,18 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Soldiers</h1>
+
+<div id="soldiers">
+  <% @soldiers.each do |soldier| %>
+    <div class="chip">
+      <img src="/uploads/<%=soldier.image%>" alt="Person" width="96" height="96">
+      <%=soldier.name%>
+    <p>
+      <%= link_to "Show this soldier", soldier %>
+    </p>
+    </div>
+
+  <% end %>
+</div>
+
+<%= link_to "New soldier", new_soldier_path %>
