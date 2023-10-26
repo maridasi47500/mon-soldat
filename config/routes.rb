@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :weapons
+  resources :cities
   resources :galons
   resources :soldiers
   resources :comments

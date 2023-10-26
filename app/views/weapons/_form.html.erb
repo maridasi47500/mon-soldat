@@ -1,0 +1,32 @@
+<%= form_with(model: weapon, html: {class:"myweaponcity"}) do |form| %>
+  <% if weapon.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(weapon.errors.count, "error") %> prohibited this weapon from being saved:</h2>
+
+      <ul>
+        <% weapon.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.hidden_field :city_id %>
+  </div>
+
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :image, style: "display: block" %>
+    <%= form.file_field :image %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

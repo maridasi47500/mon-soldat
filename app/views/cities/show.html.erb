@@ -1,0 +1,32 @@
+<p style="color: green"><%= notice %></p>
+
+<p class="myweaponcity">armes à <%= @city.name %></p>
+<div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner">
+      <%@city.weapons.each_with_index do |w,i|%>
+        <div class="carousel-item <%=i == 0 ? "active" : ""%>">
+          <img src="/uploads/<%=w.image%>" class="d-block w-100" alt="<%=w.name%>">
+                      </div>
+                    <%end%>
+                                                        </div>
+                                                          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                                    <span class="visually-hidden">Previous</span>
+                                                                      </button>
+                                                                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                                                                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                                                  <span class="visually-hidden">Next</span>
+                                                                                    </button>
+</div>
+<h1 class="myweaponcity">New weapon</h1>
+
+<%= render "weapons/form", weapon: @weapon %>
+
+<br>
+
+<div>
+  <%= link_to "Edit this city", edit_city_path(@city) %> |
+  <%= link_to "Back to cities", cities_path %>
+
+  <%= button_to "Destroy this city", @city, method: :delete %>
+</div>

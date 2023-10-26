@@ -1,4 +1,6 @@
 $(function () {
+	var myCarousel = document.querySelector('#carouselExample')
+	var carousel = new bootstrap.Carousel(myCarousel);
 	  $.widget( "custom.iconselectmenu", $.ui.selectmenu, {
 		      _renderItem: function( ul, item ) {
 			            var li = $( "<li>" ),
