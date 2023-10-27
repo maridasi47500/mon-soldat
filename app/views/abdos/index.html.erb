@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Abdos</h1>
+
+<div id="abdos">
+  <% @abdos.each do |abdo| %>
+    <%= render abdo %>
+    <p>
+      <%= link_to "Show this abdo", abdo %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New abdo", new_abdo_path %>

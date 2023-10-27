@@ -1,0 +1,22 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Exercises</h1>
+<p>ajoute des exercices que tu connais et ajoute ton entrainement aujourd'hui</p>
+<%= link_to "New exercise", new_exercise_path %> | 
+<%= link_to "mon entrainement aujourdhui", entraineajd_path %>
+
+ <div class="row row-cols-1 row-cols-md-3 g-4">
+
+
+     <% @exercises.each do |exercise| %>
+             <div class="col">
+                       <%=link_to exercise do%>
+                                     <div class="card">
+                                                     <img src="/uploads/<%=exercise.image%>" class="card-img-top" alt="<%=exercise.name%>">
+                                     </div>
+                                   <%end%>
+             </div>
+               <% end %>
+ </div>
+
+

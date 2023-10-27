@@ -1,0 +1,16 @@
+<h1>Entrainement</h1>
+<p>entre un exercise et une duree ou n exercice et un nombre</p>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+          <div class="card">
+
+<%=render "abdos/form", abdo:Abdo.new(user_id:current_user.try(:id))%>
+    </div>
+      </div>
+        <div class="col">
+              <div class="card">
+<%=render "cardios/form", cardio:Cardio.new(user_id:current_user.try(:id))%>
+    </div>
+    </div>
+      </div>
+      <%=render @arr%>

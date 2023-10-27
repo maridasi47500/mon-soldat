@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :abdos
+  resources :cardios
+  resources :exercises
+  get 'entrainement/aujourdhui', as: :entraineajd
   resources :weapons
   resources :cities
   resources :galons

@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @abdo %>
+
+<div>
+  <%= link_to "Edit this abdo", edit_abdo_path(@abdo) %> |
+  <%= link_to "Back to abdos", abdos_path %>
+
+  <%= button_to "Destroy this abdo", @abdo, method: :delete %>
+</div>

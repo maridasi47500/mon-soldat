@@ -10,7 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_10_26_183152) do
+ActiveRecord::Schema[7.0].define(version: 2023_10_27_124346) do
+  create_table "abdos", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "exercise_id"
+    t.integer "nb"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "cardios", force: :cascade do |t|
+    t.integer "exercise_id"
+    t.time "duree"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "cats", force: :cascade do |t|
     t.string "name"
     t.string "url"
@@ -30,6 +46,14 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_26_183152) do
     t.integer "post_id"
     t.text "content"
     t.string "username"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "exercises", force: :cascade do |t|
+    t.string "name"
+    t.string "image"
+    t.string "mytype"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

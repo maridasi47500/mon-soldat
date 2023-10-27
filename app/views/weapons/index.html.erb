@@ -2,12 +2,17 @@
 
 <h1>Weapons</h1>
 
-<div id="weapons">
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+
+
   <% @weapons.each do |weapon| %>
-    <%= render weapon %>
-    <p>
-      <%= link_to "Show this weapon", weapon %>
-    </p>
+      <div class="col">
+        <%=link_to weapon do%>
+            <div class="card">
+              <img src="/uploads/<%=weapon.image%>" class="card-img-top" alt="<%=weapon.name%>">
+</div>
+<%end%>
+</div>
   <% end %>
 </div>
 

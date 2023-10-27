@@ -1,0 +1,2 @@
+module AbdosHelper
+end

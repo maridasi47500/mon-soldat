@@ -2,13 +2,18 @@
 
 <h1>Cities</h1>
 
-<div id="cities">
-  <% @cities.each do |city| %>
-    <%= render city %>
-    <p>
-      <%= link_to "Show this city", city %>
-    </p>
-  <% end %>
-</div>
+ <div class="row row-cols-1 row-cols-md-3 g-4">
+
+
+     <% @cities.each do |city| %>
+             <div class="col">
+                       <%=link_to city do%>
+                                     <div class="card">
+                                                     <img src="/uploads/<%=city.image%>" class="card-img-top" alt="<%=city.name%>">
+                                     </div>
+                                   <%end%>
+             </div>
+               <% end %>
+ </div>
 
 <%= link_to "New city", new_city_path %>

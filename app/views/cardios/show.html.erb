@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @cardio %>
+
+<div>
+  <%= link_to "Edit this cardio", edit_cardio_path(@cardio) %> |
+  <%= link_to "Back to cardios", cardios_path %>
+
+  <%= button_to "Destroy this cardio", @cardio, method: :delete %>
+</div>
