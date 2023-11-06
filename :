@@ -1,0 +1,11 @@
+<h1>Forgot</h1>
+<p>enter ur email</p>
+<%=form_with url: "/forgot" do |form|%>
+  <div class="field">
+    <%=form.label :email%>
+    <%=form.email_field :email%>
+  </div>
+  <div class="actions">
+    <%=form.submit_field :ok%>
+  </div>
+<%end%>

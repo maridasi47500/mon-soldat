@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'forgot', to: "forgot#index"
+  post 'forgot', to: "forgot#reset"
   resources :abdos
   resources :cardios
   resources :exercises
@@ -11,7 +13,7 @@ Rails.application.routes.draw do
   get "my-posts/:title", to: "cats#showcat", as: :mycat
   resources :posts
   resources :cats
-  devise_for :users
+  devise_for :users, controllers: { sessions: 'users/sessions', registrations: 'users/registrations' }
   get 'bycar/index'
   get 'boat/page1'
   root 'welcome#index'

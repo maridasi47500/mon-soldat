@@ -65,21 +65,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_27_124346) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "placepics", force: :cascade do |t|
-    t.string "pic"
-    t.string "title"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "places", force: :cascade do |t|
-    t.string "lat"
-    t.string "lon"
-    t.string "title"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "posts", force: :cascade do |t|
     t.string "title"
     t.text "content"
@@ -95,13 +80,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_27_124346) do
     t.integer "user_id"
     t.integer "galon_id"
     t.date "dateofbirth"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "stuffpics", force: :cascade do |t|
-    t.string "pic"
-    t.string "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

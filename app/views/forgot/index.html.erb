@@ -1,0 +1,13 @@
+<h1>Oubli du mot de passe / Forgot</h1>
+<p>entrez votre email si vous avez oublié votre mot de passe</p>
+<p>enter ur email</p>
+
+<%=form_with url: "/forgot" do |form|%>
+  <div class="field">
+    <%=form.label :email%>
+    <%=form.email_field :email%>
+  </div>
+  <div class="actions">
+    <%=form.submit :ok%>
+  </div>
+<%end%>
